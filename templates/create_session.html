@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Session</title>
+    <style>
+        body {
+            background-image: url('/static/images/background.jpg'); /* Path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create New Session for {{ username }}</h2>
+        <form action="/process-session" method="post">
+            <input type="hidden" name="username" value="{{ username }}">
+            <input type="number" name="lap_slips" placeholder="Lap Slips" required><br>
+            <input type="number" name="stroke_count" placeholder="Stroke Count" required><br>
+            <input type="number" name="heart_rate" placeholder="Heart Rate" required><br>
+            <!-- Add more input fields as needed -->
+            <button type="submit">Create Session</button>
+        </form>
+    </div>
+</body>
+</html>
