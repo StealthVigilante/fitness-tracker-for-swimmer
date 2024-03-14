@@ -16,7 +16,7 @@ The application calculates metrics such as Swolf score, total distance, and work
 ## Installation
 
 1. Clone the repository:
-git clone <repository-url>
+git clone https://github.com/StealthVigilante/fitness-tracker-for-swimmer.git
 
 2. Install dependencies:
 pip install -r requirements.txt
